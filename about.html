@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About · Casterra Briarpath Retreat</title>
+  <!-- unique typography: work sans + lora -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <!-- font-awesome for subtle icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    /* ----- reset & base (same as homepage) ----- */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #fbf8f3;
+      color: #2e2b27;
+      font-family: 'Work Sans', sans-serif;
+      line-height: 1.6;
+      padding: 0 1rem;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ----- typography ----- */
+    h1, h2, h3, h4 {
+      font-family: 'Lora', serif;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+    h1 { font-size: 2.8rem; }
+    h2 { font-size: 2.2rem; margin: 2rem 0 1rem; }
+    h3 { font-size: 1.5rem; margin: 1.5rem 0 0.75rem; }
+    .subhead {
+      font-family: 'Work Sans', sans-serif;
+      font-weight: 300;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: #7d6b5c;
+      font-size: 0.85rem;
+    }
+
+    /* ----- color palette ----- */
+    :root {
+      --clay: #9c7e6b;
+      --moss: #5f7350;
+      --sprout: #8aa67a;
+      --sand: #e5dad1;
+      --ink: #2e2b27;
+      --paper: #fbf8f3;
+      --stone: #b8aaa0;
+    }
+
+    /* ----- header (same as homepage) ----- */
+    .site-header {
+      padding: 1.8rem 0 0.8rem;
+      border-bottom: 2px solid var(--sand);
+      margin-bottom: 2.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .brand {
+      font-family: 'Lora', serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: -0.03em;
+    }
+    .brand span { color: var(--moss); font-weight: 400; }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: #4d443d;
+    }
+    .nav-links a { border-bottom: 1px solid transparent; transition: 0.2s; }
+    .nav-links a:hover { border-bottom-color: var(--moss); color: var(--ink); }
+
+    /* ----- about hero (content-first) ----- */
+    .about-hero {
+      background: #ede7e0;
+      padding: 2.5rem 2.8rem;
+      border-radius: 2px;
+      margin-bottom: 3rem;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+    .about-hero-text h1 {
+      font-size: 2.6rem;
+      margin-bottom: 0.75rem;
+    }
+    .about-hero-text p {
+      font-size: 1.1rem;
+      color: #3f3731;
+      max-width: 90%;
+    }
+    .about-hero-image {
+      background: #d6cbc1;
+      height: 180px;
+      border-radius: 2px;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200"><rect width="400" height="200" fill="%23d6cbc1"/><text x="50" y="110" font-family="Lora,serif" font-size="24" fill="%235f7350">🌿 about · Briarpath</text><text x="50" y="145" font-family="Work Sans,sans-serif" font-size="16" fill="%239c7e6b">heritage since 1987</text></svg>');
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* ----- cards / sections (mirror homepage) ----- */
+    .section-title {
+      font-family: 'Lora', serif;
+      font-size: 1.9rem;
+      border-left: 6px solid var(--moss);
+      padding-left: 1rem;
+      margin: 2.5rem 0 1.8rem;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    .about-card {
+      background: #ffffff;
+      padding: 1.8rem 1.8rem 2rem;
+      border: 1px solid #e3d9d0;
+      transition: 0.15s ease;
+    }
+    .about-card:hover { border-color: var(--clay); background: #fcfaf7; }
+    .about-card i { color: var(--moss); font-size: 1.8rem; margin-bottom: 0.5rem; }
+
+    .timeline-item {
+      display: flex;
+      gap: 1.5rem;
+      border-bottom: 1px solid #ddd2c8;
+      padding: 1.2rem 0;
+    }
+    .timeline-year {
+      font-family: 'Lora', serif;
+      font-weight: 600;
+      font-size: 1.4rem;
+      color: var(--clay);
+      min-width: 80px;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 2rem;
+      margin: 1.5rem 0;
+    }
+    .team-member {
+      background: #f8f4ef;
+      padding: 1.5rem;
+      text-align: center;
+      border: 1px solid #e3d9d0;
+    }
+    .team-member .avatar {
+      background: #d0c3b8;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin: 0 auto 0.8rem;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80"><rect width="80" height="80" fill="%23d0c3b8"/><text x="20" y="50" font-family="Lora,serif" font-size="28" fill="%235f7350">🌱</text></svg>');
+      background-size: cover;
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px,1fr));
+      gap: 1.5rem;
+      background: #f3eee9;
+      padding: 2rem;
+      margin: 1.5rem 0;
+    }
+    .stat-item { text-align: center; }
+    .stat-number { font-family: 'Lora', serif; font-size: 2.2rem; color: var(--moss); }
+
+    .footer {
+      border-top: 2px solid var(--sand);
+      padding: 2.5rem 0 1.5rem;
+      margin-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      color: #5a4f47;
+    }
+
+    @media (max-width: 780px) {
+      .about-hero { grid-template-columns: 1fr; padding: 1.8rem; }
+      .about-hero-image { height: 120px; }
+      .site-header { flex-direction: column; gap: 0.5rem; }
+      .nav-links { flex-wrap: wrap; gap: 0.8rem 1.5rem; }
+      h1 { font-size: 2.2rem; }
+    }
+    @media (max-width: 480px) {
+      .container { padding: 0 0.8rem; }
+      .about-card { padding: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- header (same as homepage) -->
+  <header class="site-header">
+    <div class="brand">Casterra <span>·</span> Briarpath Retreat</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html" style="border-bottom-color: var(--moss);">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="terms.html">Terms Of Privacy</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="cookies.html">Cookies Policy</a>
+    </div>
+  </header>
+
+  <!-- about hero -->
+  <section class="about-hero">
+    <div class="about-hero-text">
+      <h1>Rooted in place</h1>
+      <p>Casterra · Briarpath Retreat is a living archive of gardening wisdom, cultivated since 1987. We blend heritage techniques with ecological insight — a sanctuary for soil, seed, and spirit.</p>
+      <div style="display: flex; gap: 1.5rem; margin-top: 1.2rem; flex-wrap: wrap;">
+        <span><i class="fas fa-tree" style="color: var(--moss);"></i> 35+ acres</span>
+        <span><i class="fas fa-seedling" style="color: var(--moss);"></i> 200+ heirloom varieties</span>
+        <span><i class="fas fa-hand-holding-heart" style="color: var(--moss);"></i> no-till since 2005</span>
+      </div>
+    </div>
+    <div class="about-hero-image" aria-label="about retreat visual"></div> <!-- image 1 -->
+  </section>
+
+  <!-- mission & values (cards) -->
+  <h2 class="section-title">Our compass</h2>
+  <div class="card-grid">
+    <div class="about-card"><i class="fas fa-seedling"></i><h3>Regenerative</h3><p>We build soil, not just crops. Every practice — from compost to cover crops — aims to increase biodiversity and organic matter.</p></div>
+    <div class="about-card"><i class="fas fa-book-open"></i><h3>Educational</h3><p>We share what we learn through workshops, articles, and open garden days. Knowledge is a perennial.</p></div>
+    <div class="about-card"><i class="fas fa-feather-alt"></i><h3>Restorative</h3><p>Gardening as a path to connection: with nature, with community, and with the rhythm of the seasons.</p></div>
+  </div>
+
+  <!-- timeline (visual story) -->
+  <h2 class="section-title">A brief history</h2>
+  <div style="background: #f8f4ef; padding: 1.5rem 2rem;">
+    <div class="timeline-item"><span class="timeline-year">1987</span><div><strong>First planting</strong> — The Casterra family establishes the retreat with a small orchard and vegetable plot.</div></div>
+    <div class="timeline-item"><span class="timeline-year">1995</span><div><strong>Heritage seed collection</strong> — Begins with regional heirlooms; now over 200 varieties.</div></div>
+    <div class="timeline-item"><span class="timeline-year">2005</span><div><strong>No-till adoption</strong> — A turning point: we commit to soil health, eliminating tillage entirely.</div></div>
+    <div class="timeline-item"><span class="timeline-year">2016</span><div><strong>Briarpath journal</strong> — Online publication launched, sharing gardening essays and research.</div></div>
+    <div class="timeline-item"><span class="timeline-year">2026</span><div><strong>40th season</strong> — Continuing the legacy with renewed focus on climate-adapted gardening.</div></div>
+  </div>
+
+  <!-- team & people -->
+  <h2 class="section-title">The gardeners</h2>
+  <div class="team-grid">
+    <div class="team-member"><div class="avatar"></div><h4>Elara Casterra</h4><p style="font-size:0.9rem; color:#4d443d;">Head Gardener · soil ecology</p></div>
+    <div class="team-member"><div class="avatar" style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 80 80%22><rect width=%2280%22 height=%2280%22 fill=%22%23d0c3b8%22/><text x=%2220%22 y=%2250%22 font-family=%22Lora,serif%22 font-size=%2228%22 fill=%22%235f7350%22>🌿</text></svg>');"></div><h4>M. Graves</h4><p style="font-size:0.9rem; color:#4d443d;">Seed curator · heirloom specialist</p></div>
+    <div class="team-member"><div class="avatar" style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 80 80%22><rect width=%2280%22 height=%2280%22 fill=%22%23d0c3b8%22/><text x=%2220%22 y=%2250%22 font-family=%22Lora,serif%22 font-size=%2228%22 fill=%22%235f7350%22>🌸</text></svg>');"></div><h4>R. Briar</h4><p style="font-size:0.9rem; color:#4d443d;">Pollinator & habitat designer</p></div>
+  </div>
+
+  <!-- stats / impact -->
+  <div class="stat-grid">
+    <div class="stat-item"><div class="stat-number">35+</div><div>acres managed</div></div>
+    <div class="stat-item"><div class="stat-number">200+</div><div>heirloom varieties</div></div>
+    <div class="stat-item"><div class="stat-number">15</div><div>native plant guilds</div></div>
+    <div class="stat-item"><div class="stat-number">40</div><div>years of cultivation</div></div>
+  </div>
+
+  <!-- philosophy (longer read) -->
+  <h2 class="section-title">Philosophy & practice</h2>
+  <div style="background: #fffcf9; border: 1px solid #e3d9d0; padding: 1.8rem 2.2rem; margin-bottom: 2rem;">
+    <p style="font-size:1.05rem; max-width: 80ch;">At Briarpath, we see gardening as a conversation with the land. Our methods are rooted in observation: we listen to the soil, the weather, and the plants themselves. We favor perennials, minimal disturbance, and diversity. Every bed is a living experiment in resilience. We invite you to explore, learn, and grow with us.</p>
+    <div style="margin-top:1.2rem; display: flex; gap: 2rem; flex-wrap: wrap;">
+      <span><i class="fas fa-check-circle" style="color: var(--moss);"></i> 100% organic (no synthetics)</span>
+      <span><i class="fas fa-check-circle" style="color: var(--moss);"></i> water-harvesting systems</span>
+      <span><i class="fas fa-check-circle" style="color: var(--moss);"></i> seed sovereignty</span>
+    </div>
+  </div>
+
+  <!-- infographic / visual element (only one) -->
+  <div style="background: #eae2da; padding: 1.8rem 2rem; margin: 2rem 0; border-left: 6px solid var(--clay); display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;">
+    <i class="fas fa-chart-line" style="font-size: 2.2rem; color: var(--moss);"></i>
+    <span><strong>Infographic:</strong> Soil carbon accumulation over 40 years — from 1.2% to 4.8% organic matter. <span style="color:var(--moss);">(visual summary)</span></span>
+  </div>
+
+  <!-- FAQ (about-specific) -->
+  <h2 class="section-title">Frequently asked questions</h2>
+  <div style="background: #f8f4ef; padding: 1.5rem 2rem;">
+    <div class="faq-item" style="border-bottom:1px solid #ddd2c8; padding:1rem 0;"><strong>Can I visit the retreat?</strong> <p>Yes — we host open garden days in spring and autumn. Check our events calendar or contact us for details.</p></div>
+    <div class="faq-item" style="border-bottom:1px solid #ddd2c8; padding:1rem 0;"><strong>Do you offer workshops?</strong> <p>We run seasonal workshops on grafting, seed saving, and soil building. Sign up for our newsletter to stay informed.</p></div>
+    <div class="faq-item" style="padding:1rem 0;"><strong>Are your seeds available for purchase?</strong> <p>We offer a small selection of heritage seeds through our online store, and we participate in local seed swaps.</p></div>
+  </div>
+
+  <!-- newsletter (same as homepage) -->
+  <div class="newsletter" style="background: #e5dad1; padding: 2.5rem 2rem; text-align: center; margin: 2.5rem 0;">
+    <h3 style="font-family:'Lora',serif; font-size:1.7rem;">The Briarpath letter</h3>
+    <p style="max-width:500px; margin:0.5rem auto 1.2rem;">Seasonal insights, rare seed notes, and garden essays. No spam, only soil.</p>
+    <input type="email" placeholder="your email" style="border:none; padding:0.8rem 1.2rem; width:260px; max-width:80%; background:white; font-family:'Work Sans',sans-serif;" /> 
+    <button style="background: var(--moss); border:none; color:white; padding:0.8rem 2rem; font-weight:600; font-family:'Work Sans',sans-serif; cursor:pointer;">Subscribe</button>
+  </div>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div>© 2026 Casterra · Briarpath Retreat</div>
+    <div style="display:flex; gap:1.2rem;">
+      <a href="about.html">about</a> <a href="contact.html">contact</a> <a href="privacy.html">privacy</a> <a href="#">rss</a>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

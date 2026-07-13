@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Casterra · Briarpath Retreat | Privacy</title>
+  <!-- unique typography: work sans + lora -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <!-- font-awesome for subtle icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    /* ----- reset & base (same as original) ----- */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #fbf8f3;
+      color: #2e2b27;
+      font-family: 'Work Sans', sans-serif;
+      line-height: 1.6;
+      padding: 0 1rem;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ----- typography ----- */
+    h1, h2, h3, h4 {
+      font-family: 'Lora', serif;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+    h1 { font-size: 2.8rem; }
+    h2 { font-size: 2.2rem; margin: 2rem 0 1rem; }
+    h3 { font-size: 1.5rem; margin: 1.5rem 0 0.75rem; }
+    .subhead {
+      font-family: 'Work Sans', sans-serif;
+      font-weight: 300;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: #7d6b5c;
+      font-size: 0.85rem;
+    }
+
+    /* ----- color palette ----- */
+    :root {
+      --clay: #9c7e6b;
+      --moss: #5f7350;
+      --sprout: #8aa67a;
+      --sand: #e5dad1;
+      --ink: #2e2b27;
+      --paper: #fbf8f3;
+      --stone: #b8aaa0;
+    }
+
+    /* ----- header / nav (same as original) ----- */
+    .site-header {
+      padding: 1.8rem 0 0.8rem;
+      border-bottom: 2px solid var(--sand);
+      margin-bottom: 2.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .brand {
+      font-family: 'Lora', serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: -0.03em;
+    }
+    .brand span { color: var(--moss); font-weight: 400; }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: #4d443d;
+    }
+    .nav-links a { border-bottom: 1px solid transparent; transition: 0.2s; }
+    .nav-links a:hover { border-bottom-color: var(--moss); color: var(--ink); }
+
+    /* ----- privacy hero (variant) ----- */
+    .privacy-hero {
+      background: #ede7e0;
+      padding: 2.5rem 2.8rem;
+      border-radius: 2px;
+      margin-bottom: 2.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .privacy-hero h1 {
+      font-size: 2.4rem;
+      margin-bottom: 0.25rem;
+    }
+    .privacy-hero p {
+      font-size: 1.1rem;
+      color: #3f3731;
+      max-width: 600px;
+    }
+    .privacy-hero .hero-icon {
+      font-size: 2.8rem;
+      color: var(--moss);
+      background: #d6cbc1;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+
+    /* ----- privacy content (clean, structured) ----- */
+    .privacy-content {
+      background: #ffffff;
+      border: 1px solid #e3d9d0;
+      padding: 2.5rem 2.8rem;
+      margin: 1.5rem 0 2.5rem;
+    }
+    .privacy-content h2 {
+      margin-top: 0;
+      font-size: 1.8rem;
+      border-bottom: 2px solid var(--sand);
+      padding-bottom: 0.5rem;
+    }
+    .privacy-content h3 {
+      font-size: 1.3rem;
+      margin-top: 1.8rem;
+      color: var(--clay);
+    }
+    .privacy-content p {
+      margin: 0.8rem 0;
+    }
+    .privacy-content ul {
+      margin: 0.8rem 0 1rem 1.8rem;
+    }
+    .privacy-content li {
+      margin: 0.3rem 0;
+    }
+    .privacy-content .highlight-box {
+      background: #f3eee9;
+      padding: 1.2rem 1.8rem;
+      border-left: 6px solid var(--moss);
+      margin: 1.5rem 0;
+    }
+    .privacy-content .highlight-box i {
+      color: var(--moss);
+      margin-right: 0.5rem;
+    }
+
+    /* ----- extra: quick links / FAQ teaser (consistent) ----- */
+    .quick-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin: 2rem 0;
+      background: #f6f1eb;
+      padding: 1.5rem;
+    }
+    .quick-links > div {
+      flex: 1;
+      min-width: 150px;
+    }
+    .quick-links h4 {
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
+    }
+    .quick-links ul {
+      list-style: none;
+      font-size: 0.9rem;
+    }
+    .quick-links ul li { padding: 0.2rem 0; }
+
+    /* ----- newsletter (matching original) ----- */
+    .newsletter {
+      background: #e5dad1;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      margin: 2.5rem 0;
+    }
+    .newsletter h3 {
+      font-family: 'Lora', serif;
+      font-size: 1.7rem;
+    }
+    .newsletter p {
+      max-width: 500px;
+      margin: 0.5rem auto 1.2rem;
+    }
+    .newsletter input {
+      border: none;
+      padding: 0.8rem 1.2rem;
+      width: 260px;
+      max-width: 80%;
+      background: white;
+      font-family: 'Work Sans', sans-serif;
+    }
+    .newsletter button {
+      background: var(--moss);
+      border: none;
+      color: white;
+      padding: 0.8rem 2rem;
+      font-weight: 600;
+      font-family: 'Work Sans', sans-serif;
+      cursor: pointer;
+    }
+
+    /* ----- footer (same) ----- */
+    .footer {
+      border-top: 2px solid var(--sand);
+      padding: 2.5rem 0 1.5rem;
+      margin-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      color: #5a4f47;
+    }
+
+    /* mobile */
+    @media (max-width: 780px) {
+      .privacy-hero { flex-direction: column; text-align: center; gap: 1rem; }
+      .site-header { flex-direction: column; gap: 0.5rem; }
+      .nav-links { flex-wrap: wrap; gap: 0.8rem 1.5rem; }
+      h1 { font-size: 2.2rem; }
+      .privacy-content { padding: 1.5rem; }
+    }
+    @media (max-width: 480px) {
+      .container { padding: 0 0.8rem; }
+      .privacy-content { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- header (exactly as original) -->
+  <header class="site-header">
+    <div class="brand">Casterra <span>·</span> Briarpath Retreat</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="terms.html">Terms Of Privacy</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="cookies.html">Cookies Policy</a>
+    </div>
+  </header>
+
+  <!-- privacy hero -->
+  <section class="privacy-hero">
+    <div>
+      <h1>Your privacy, rooted in trust</h1>
+      <p>We treat your data like we treat our soil — with care, respect, and transparency.</p>
+    </div>
+    <div class="hero-icon"><i class="fas fa-shield-alt"></i></div>
+  </section>
+
+  <!-- privacy content (main policy) -->
+  <div class="privacy-content">
+    <h2>Privacy Policy</h2>
+    <p><em>Last updated: April 2026</em></p>
+    <p>At Casterra · Briarpath Retreat, we are committed to protecting your privacy. This policy explains how we collect, use, and safeguard your personal information when you visit our website or engage with our services.</p>
+
+    <h3>1. Information we collect</h3>
+    <p>We may collect the following types of information:</p>
+    <ul>
+      <li><strong>Personal data:</strong> Name, email address, phone number, and any details you provide via forms or correspondence.</li>
+      <li><strong>Usage data:</strong> IP address, browser type, pages visited, and referral sources (via cookies — see our <a href="cookies.html" style="color: var(--moss); text-decoration: underline;">Cookies Policy</a>).</li>
+      <li><strong>Newsletter subscriptions:</strong> Email addresses for our seasonal newsletter (you can unsubscribe at any time).</li>
+    </ul>
+
+    <h3>2. How we use your information</h3>
+    <ul>
+      <li>To respond to inquiries, bookings, or workshop registrations.</li>
+      <li>To send periodic emails about garden events, new content, or special offers (only if you opt in).</li>
+      <li>To improve our website and user experience.</li>
+      <li>To comply with legal obligations.</li>
+    </ul>
+
+    <div class="highlight-box">
+      <i class="fas fa-seedling"></i> <strong>Our promise:</strong> We never sell, rent, or trade your personal data to third parties. Your information stays within the Briarpath community.
+    </div>
+
+    <h3>3. Data security</h3>
+    <p>We implement appropriate technical and organisational measures to protect your data against unauthorised access, loss, or alteration. Our website uses HTTPS encryption, and all form submissions are secured.</p>
+
+    <h3>4. Your rights</h3>
+    <p>You have the right to:</p>
+    <ul>
+      <li>Access, correct, or delete your personal data.</li>
+      <li>Withdraw consent for marketing communications.</li>
+      <li>Request a copy of the data we hold about you.</li>
+    </ul>
+    <p>To exercise these rights, please <a href="contact.html" style="color: var(--moss); text-decoration: underline;">contact us</a>.</p>
+
+    <h3>5. Third-party links</h3>
+    <p>Our website may contain links to external sites. We are not responsible for their privacy practices, so we encourage you to read their policies.</p>
+
+    <h3>6. Changes to this policy</h3>
+    <p>We may update this policy occasionally. Any changes will be posted on this page with a revised date.</p>
+
+    <p style="margin-top: 2rem; font-size: 0.95rem; color: var(--stone);"><i class="fas fa-leaf" style="color: var(--moss);"></i> If you have any questions, please reach out — we’re here to help.</p>
+  </div>
+
+  <!-- extra: quick links / FAQ teaser (consistent) -->
+  <div class="quick-links">
+    <div>
+      <h4><i class="fas fa-question-circle" style="color:var(--moss);"></i> Privacy FAQs</h4>
+      <ul>
+        <li>• <a href="#">How long do you keep data?</a></li>
+        <li>• <a href="#">Do you use cookies?</a></li>
+        <li>• <a href="#">Can I opt out?</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4><i class="fas fa-pen-fancy" style="color:var(--clay);"></i> Related policies</h4>
+      <ul>
+        <li>• <a href="terms.html">Terms of Privacy</a></li>
+        <li>• <a href="cookies.html">Cookies Policy</a></li>
+        <li>• <a href="contact.html">Contact us</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- newsletter (matching original) -->
+  <div class="newsletter">
+    <h3>The Briarpath letter</h3>
+    <p>Seasonal insights, rare seed notes, and garden essays. No spam, only soil.</p>
+    <input type="email" placeholder="your email" />
+    <button>Subscribe</button>
+  </div>
+
+  <!-- footer (identical) -->
+  <footer class="footer">
+    <div>© 2026 Casterra · Briarpath Retreat</div>
+    <div style="display:flex; gap:1.2rem;">
+      <a href="#">about</a> <a href="#">contact</a> <a href="#">privacy</a> <a href="#">rss</a>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Casterra · Briarpath Retreat | contact</title>
+  <!-- unique typography: work sans + lora -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <!-- font-awesome for subtle icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    /* ----- reset & base (same as original) ----- */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #fbf8f3;
+      color: #2e2b27;
+      font-family: 'Work Sans', sans-serif;
+      line-height: 1.6;
+      padding: 0 1rem;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ----- typography ----- */
+    h1, h2, h3, h4 {
+      font-family: 'Lora', serif;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+    h1 { font-size: 2.8rem; }
+    h2 { font-size: 2.2rem; margin: 2rem 0 1rem; }
+    h3 { font-size: 1.5rem; margin: 1.5rem 0 0.75rem; }
+    .subhead {
+      font-family: 'Work Sans', sans-serif;
+      font-weight: 300;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: #7d6b5c;
+      font-size: 0.85rem;
+    }
+
+    /* ----- color palette ----- */
+    :root {
+      --clay: #9c7e6b;
+      --moss: #5f7350;
+      --sprout: #8aa67a;
+      --sand: #e5dad1;
+      --ink: #2e2b27;
+      --paper: #fbf8f3;
+      --stone: #b8aaa0;
+    }
+
+    /* ----- header / nav (same as original) ----- */
+    .site-header {
+      padding: 1.8rem 0 0.8rem;
+      border-bottom: 2px solid var(--sand);
+      margin-bottom: 2.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .brand {
+      font-family: 'Lora', serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: -0.03em;
+    }
+    .brand span { color: var(--moss); font-weight: 400; }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: #4d443d;
+    }
+    .nav-links a { border-bottom: 1px solid transparent; transition: 0.2s; }
+    .nav-links a:hover { border-bottom-color: var(--moss); color: var(--ink); }
+
+    /* ----- contact hero (variant) ----- */
+    .contact-hero {
+      background: #ede7e0;
+      padding: 2.5rem 2.8rem;
+      border-radius: 2px;
+      margin-bottom: 2.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .contact-hero h1 {
+      font-size: 2.4rem;
+      margin-bottom: 0.25rem;
+    }
+    .contact-hero p {
+      font-size: 1.1rem;
+      color: #3f3731;
+      max-width: 600px;
+    }
+    .contact-hero .hero-icon {
+      font-size: 2.8rem;
+      color: var(--moss);
+      background: #d6cbc1;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+
+    /* ----- form + info grid ----- */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 2.5rem;
+      margin: 1.5rem 0 2.5rem;
+    }
+    .contact-form {
+      background: #ffffff;
+      border: 1px solid #e3d9d0;
+      padding: 2rem 2.2rem;
+    }
+    .contact-form label {
+      display: block;
+      font-weight: 600;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #3f3731;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.7rem 0.8rem;
+      border: 1px solid #ddd2c8;
+      background: #fcfaf7;
+      font-family: 'Work Sans', sans-serif;
+      margin-top: 0.3rem;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: 1px solid var(--clay);
+      border-color: var(--clay);
+    }
+    .contact-form button {
+      background: var(--moss);
+      border: none;
+      color: white;
+      padding: 0.8rem 2.2rem;
+      font-weight: 600;
+      font-family: 'Work Sans', sans-serif;
+      cursor: pointer;
+      margin-top: 1.5rem;
+      transition: 0.15s;
+    }
+    .contact-form button:hover { background: #4a5e3d; }
+
+    .contact-info {
+      background: #f3eee9;
+      padding: 2rem 2rem;
+      border-left: 6px solid var(--clay);
+    }
+    .contact-info h3 {
+      font-family: 'Lora', serif;
+      margin-top: 0;
+    }
+    .contact-info p { margin: 0.8rem 0; }
+    .contact-info i {
+      width: 1.8rem;
+      color: var(--moss);
+    }
+    .contact-info .social-links {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 1.2rem;
+      font-size: 1.4rem;
+    }
+    .contact-info .social-links a { color: #5a4f47; transition: 0.2s; }
+    .contact-info .social-links a:hover { color: var(--moss); }
+
+    /* ----- extra: map placeholder (text only) ----- */
+    .map-placeholder {
+      background: #e5dad1;
+      padding: 1.8rem 2rem;
+      margin: 1.5rem 0 2rem;
+      border-left: 6px solid var(--moss);
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .map-placeholder i { font-size: 2.2rem; color: var(--clay); }
+
+    /* ----- footer (same) ----- */
+    .footer {
+      border-top: 2px solid var(--sand);
+      padding: 2.5rem 0 1.5rem;
+      margin-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      color: #5a4f47;
+    }
+
+    /* mobile */
+    @media (max-width: 780px) {
+      .contact-grid { grid-template-columns: 1fr; }
+      .contact-hero { flex-direction: column; text-align: center; gap: 1rem; }
+      .site-header { flex-direction: column; gap: 0.5rem; }
+      .nav-links { flex-wrap: wrap; gap: 0.8rem 1.5rem; }
+      h1 { font-size: 2.2rem; }
+    }
+    @media (max-width: 480px) {
+      .container { padding: 0 0.8rem; }
+      .contact-form { padding: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- header (exactly as original) -->
+  <header class="site-header">
+    <div class="brand">Casterra <span>·</span> Briarpath Retreat</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="terms.html">Terms Of Privacy</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="cookies.html">Cookies Policy</a>
+    </div>
+  </header>
+
+  <!-- contact hero -->
+  <section class="contact-hero">
+    <div>
+      <h1>Let’s cultivate a conversation</h1>
+      <p>Questions about soil, seeds, or seasonal rhythm? Reach out — we reply within a day.</p>
+    </div>
+    <div class="hero-icon"><i class="fas fa-seedling"></i></div>
+  </section>
+
+  <!-- contact grid: form + info -->
+  <div class="contact-grid">
+    <!-- form -->
+    <div class="contact-form">
+      <h3 style="margin-top:0; font-family:'Lora',serif;">Send a note</h3>
+      <form action="#" method="post">
+        <label for="name">Full name</label>
+        <input type="text" id="name" name="name" placeholder="e.g. Hazel Green" />
+
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" placeholder="hazel@example.com" />
+
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" placeholder="Gardening question" />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Tell us about your garden..."></textarea>
+
+        <button type="submit"><i class="fas fa-paper-plane" style="margin-right:0.5rem;"></i> Send</button>
+      </form>
+      <p style="margin-top:1rem; font-size:0.85rem; color:var(--stone);"><i class="fas fa-lock"></i> Your data stays with us — no spam, ever.</p>
+    </div>
+
+    <!-- contact info -->
+    <div class="contact-info">
+      <h3>Reach us directly</h3>
+      <p><i class="fas fa-envelope"></i> <a href="mailto:garden@casterra-briarpath.com">garden@casterra-briarpath.com</a></p>
+      <p><i class="fas fa-phone-alt"></i> +1 (800) 555‑Grow (4769)</p>
+      <p><i class="fas fa-map-pin"></i> 142 Briarpath Lane, Casterra Valley</p>
+      <p><i class="fas fa-clock"></i> Mon–Fri 9am–5pm (EST)</p>
+
+      <div class="social-links">
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="RSS"><i class="fas fa-rss"></i></a>
+      </div>
+
+      <div style="margin-top:1.8rem; border-top:1px solid #d6cbc1; padding-top:1.2rem;">
+        <p style="font-style:italic; color:#3f3731;">“We believe every garden tells a story. Let’s write yours together.”</p>
+        <p style="font-size:0.85rem; color:var(--stone);">— The Briarpath team</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- map / location (text + icon) -->
+  <div class="map-placeholder">
+    <i class="fas fa-map-marked-alt"></i>
+    <span><strong>Visit us?</strong> Our demonstration gardens are open by appointment. <a href="#" style="border-bottom:1px dotted var(--moss); color:var(--moss);">Request a tour</a> — we’d love to show you the no‑till beds and heritage orchard.</span>
+  </div>
+
+  <!-- extra: quick links / FAQ teaser (consistent with original style) -->
+  <div style="display:flex; flex-wrap:wrap; gap:1.5rem; margin:2rem 0; background:#f6f1eb; padding:1.5rem;">
+    <div style="flex:1; min-width:150px;">
+      <h4 style="font-family:'Lora',serif; font-size:1.1rem;"><i class="fas fa-question-circle" style="color:var(--moss);"></i> Before you write</h4>
+      <ul style="list-style:none; font-size:0.9rem;">
+        <li style="padding:0.2rem 0;">• <a href="#">FAQs</a> — quick answers</li>
+        <li style="padding:0.2rem 0;">• <a href="#">Seed starting guide</a></li>
+        <li style="padding:0.2rem 0;">• <a href="#">Soil testing</a></li>
+      </ul>
+    </div>
+    <div style="flex:1; min-width:150px;">
+      <h4 style="font-family:'Lora',serif; font-size:1.1rem;"><i class="fas fa-pen-fancy" style="color:var(--clay);"></i> Press & collaborations</h4>
+      <ul style="list-style:none; font-size:0.9rem;">
+        <li style="padding:0.2rem 0;">• <a href="#">Media kit</a></li>
+        <li style="padding:0.2rem 0;">• <a href="#">Speaking inquiries</a></li>
+        <li style="padding:0.2rem 0;">• <a href="#">Workshops</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- newsletter (matching original) -->
+  <div class="newsletter" style="background:#e5dad1; padding:2.5rem 2rem; text-align:center; margin:2.5rem 0;">
+    <h3 style="font-family:'Lora',serif; font-size:1.7rem;">The Briarpath letter</h3>
+    <p style="max-width:500px; margin:0.5rem auto 1.2rem;">Seasonal insights, rare seed notes, and garden essays. No spam, only soil.</p>
+    <input type="email" placeholder="your email" style="border:none; padding:0.8rem 1.2rem; width:260px; max-width:80%; background:white; font-family:'Work Sans',sans-serif;" />
+    <button style="background:var(--moss); border:none; color:white; padding:0.8rem 2rem; font-weight:600; font-family:'Work Sans',sans-serif; cursor:pointer;">Subscribe</button>
+  </div>
+
+  <!-- footer (identical) -->
+  <footer class="footer">
+    <div>© 2026 Casterra · Briarpath Retreat</div>
+    <div style="display:flex; gap:1.2rem;">
+      <a href="#">about</a> <a href="#">contact</a> <a href="#">privacy</a> <a href="#">rss</a>
+    </div>
+  </footer>
+
+  <!-- note: contact page includes 0 extra images besides the hero icon (which is pure CSS) — fully consistent with original style -->
+</div>
+</body>
+</html>

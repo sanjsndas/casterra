@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Casterra · Briarpath Retreat | Cookies</title>
+  <!-- unique typography: work sans + lora -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <!-- font-awesome for subtle icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    /* ----- reset & base (same as original) ----- */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #fbf8f3;
+      color: #2e2b27;
+      font-family: 'Work Sans', sans-serif;
+      line-height: 1.6;
+      padding: 0 1rem;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ----- typography ----- */
+    h1, h2, h3, h4 {
+      font-family: 'Lora', serif;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+    h1 { font-size: 2.8rem; }
+    h2 { font-size: 2.2rem; margin: 2rem 0 1rem; }
+    h3 { font-size: 1.5rem; margin: 1.5rem 0 0.75rem; }
+    .subhead {
+      font-family: 'Work Sans', sans-serif;
+      font-weight: 300;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: #7d6b5c;
+      font-size: 0.85rem;
+    }
+
+    /* ----- color palette ----- */
+    :root {
+      --clay: #9c7e6b;
+      --moss: #5f7350;
+      --sprout: #8aa67a;
+      --sand: #e5dad1;
+      --ink: #2e2b27;
+      --paper: #fbf8f3;
+      --stone: #b8aaa0;
+    }
+
+    /* ----- header / nav (same as original) ----- */
+    .site-header {
+      padding: 1.8rem 0 0.8rem;
+      border-bottom: 2px solid var(--sand);
+      margin-bottom: 2.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .brand {
+      font-family: 'Lora', serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: -0.03em;
+    }
+    .brand span { color: var(--moss); font-weight: 400; }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: #4d443d;
+    }
+    .nav-links a { border-bottom: 1px solid transparent; transition: 0.2s; }
+    .nav-links a:hover { border-bottom-color: var(--moss); color: var(--ink); }
+
+    /* ----- cookies hero (variant) ----- */
+    .cookies-hero {
+      background: #ede7e0;
+      padding: 2.5rem 2.8rem;
+      border-radius: 2px;
+      margin-bottom: 2.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .cookies-hero h1 {
+      font-size: 2.4rem;
+      margin-bottom: 0.25rem;
+    }
+    .cookies-hero p {
+      font-size: 1.1rem;
+      color: #3f3731;
+      max-width: 600px;
+    }
+    .cookies-hero .hero-icon {
+      font-size: 2.8rem;
+      color: var(--moss);
+      background: #d6cbc1;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+
+    /* ----- cookies content (clean, structured) ----- */
+    .cookies-content {
+      background: #ffffff;
+      border: 1px solid #e3d9d0;
+      padding: 2.5rem 2.8rem;
+      margin: 1.5rem 0 2.5rem;
+    }
+    .cookies-content h2 {
+      margin-top: 0;
+      font-size: 1.8rem;
+      border-bottom: 2px solid var(--sand);
+      padding-bottom: 0.5rem;
+    }
+    .cookies-content h3 {
+      font-size: 1.3rem;
+      margin-top: 1.8rem;
+      color: var(--clay);
+    }
+    .cookies-content p {
+      margin: 0.8rem 0;
+    }
+    .cookies-content ul {
+      margin: 0.8rem 0 1rem 1.8rem;
+    }
+    .cookies-content li {
+      margin: 0.3rem 0;
+    }
+    .cookies-content .highlight-box {
+      background: #f3eee9;
+      padding: 1.2rem 1.8rem;
+      border-left: 6px solid var(--moss);
+      margin: 1.5rem 0;
+    }
+    .cookies-content .highlight-box i {
+      color: var(--moss);
+      margin-right: 0.5rem;
+    }
+    .cookie-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+    }
+    .cookie-table th {
+      background: #ede7e0;
+      text-align: left;
+      padding: 0.6rem 0.8rem;
+      font-weight: 600;
+    }
+    .cookie-table td {
+      border-bottom: 1px solid #e3d9d0;
+      padding: 0.6rem 0.8rem;
+    }
+
+    /* ----- extra: quick links / FAQ teaser (consistent) ----- */
+    .quick-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin: 2rem 0;
+      background: #f6f1eb;
+      padding: 1.5rem;
+    }
+    .quick-links > div {
+      flex: 1;
+      min-width: 150px;
+    }
+    .quick-links h4 {
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
+    }
+    .quick-links ul {
+      list-style: none;
+      font-size: 0.9rem;
+    }
+    .quick-links ul li { padding: 0.2rem 0; }
+
+    /* ----- newsletter (matching original) ----- */
+    .newsletter {
+      background: #e5dad1;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      margin: 2.5rem 0;
+    }
+    .newsletter h3 {
+      font-family: 'Lora', serif;
+      font-size: 1.7rem;
+    }
+    .newsletter p {
+      max-width: 500px;
+      margin: 0.5rem auto 1.2rem;
+    }
+    .newsletter input {
+      border: none;
+      padding: 0.8rem 1.2rem;
+      width: 260px;
+      max-width: 80%;
+      background: white;
+      font-family: 'Work Sans', sans-serif;
+    }
+    .newsletter button {
+      background: var(--moss);
+      border: none;
+      color: white;
+      padding: 0.8rem 2rem;
+      font-weight: 600;
+      font-family: 'Work Sans', sans-serif;
+      cursor: pointer;
+    }
+
+    /* ----- footer (same) ----- */
+    .footer {
+      border-top: 2px solid var(--sand);
+      padding: 2.5rem 0 1.5rem;
+      margin-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      color: #5a4f47;
+    }
+
+    /* mobile */
+    @media (max-width: 780px) {
+      .cookies-hero { flex-direction: column; text-align: center; gap: 1rem; }
+      .site-header { flex-direction: column; gap: 0.5rem; }
+      .nav-links { flex-wrap: wrap; gap: 0.8rem 1.5rem; }
+      h1 { font-size: 2.2rem; }
+      .cookies-content { padding: 1.5rem; }
+    }
+    @media (max-width: 480px) {
+      .container { padding: 0 0.8rem; }
+      .cookies-content { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- header (exactly as original) -->
+  <header class="site-header">
+    <div class="brand">Casterra <span>·</span> Briarpath Retreat</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="terms.html">Terms Of Privacy</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="cookies.html">Cookies Policy</a>
+    </div>
+  </header>
+
+  <!-- cookies hero -->
+  <section class="cookies-hero">
+    <div>
+      <h1>Cookies &amp; your digital garden</h1>
+      <p>We use cookies to nurture your experience — not to harvest your data. Learn how we keep it simple and transparent.</p>
+    </div>
+    <div class="hero-icon"><i class="fas fa-cookie-bite"></i></div>
+  </section>
+
+  <!-- cookies content (main policy) -->
+  <div class="cookies-content">
+    <h2>Cookies Policy</h2>
+    <p><em>Last updated: April 2026</em></p>
+    <p>This Cookies Policy explains what cookies are, how we use them, and how you can manage your preferences. At Casterra · Briarpath Retreat, we believe in clarity — just like a well-tended path.</p>
+
+    <h3>What are cookies?</h3>
+    <p>Cookies are small text files stored on your device when you visit a website. They help us remember your preferences, understand how you interact with our site, and improve your experience. We use only minimal, respectful cookies.</p>
+
+    <h3>Types of cookies we use</h3>
+    <table class="cookie-table">
+      <thead>
+        <tr><th>Cookie</th><th>Purpose</th><th>Duration</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>session_id</strong></td><td>Maintains your session during a visit (e.g., form submissions).</td><td>session</td></tr>
+        <tr><td><strong>preferences</strong></td><td>Remembers your language or region settings.</td><td>1 year</td></tr>
+        <tr><td><strong>analytics_anon</strong></td><td>Collects anonymous usage data to improve content (no personal info).</td><td>2 years</td></tr>
+      </tbody>
+    </table>
+
+    <div class="highlight-box">
+      <i class="fas fa-seedling"></i> <strong>Our commitment:</strong> We do not use tracking cookies for advertising, and we never share cookie data with third parties. Your visit stays as private as a hidden glade.
+    </div>
+
+    <h3>How you can manage cookies</h3>
+    <p>Most browsers allow you to control cookies through their settings. You can:</p>
+    <ul>
+      <li>Block all cookies (though some site features may not work as expected).</li>
+      <li>Delete existing cookies.</li>
+      <li>Set preferences for specific sites.</li>
+    </ul>
+    <p>To adjust your settings, check your browser’s help section. For more information, visit <a href="https://www.aboutcookies.org" target="_blank" style="color: var(--moss); text-decoration: underline;">aboutcookies.org</a>.</p>
+
+    <h3>Changes to this policy</h3>
+    <p>We may update this Cookies Policy occasionally. Any changes will be posted here with a new date. We encourage you to review it periodically.</p>
+
+    <p style="margin-top: 2rem; font-size: 0.95rem; color: var(--stone);"><i class="fas fa-leaf" style="color: var(--moss);"></i> If you have questions, please <a href="contact.html" style="color: var(--moss); text-decoration: underline;">contact us</a> — we’re always happy to help.</p>
+  </div>
+
+  <!-- extra: quick links / FAQ teaser (consistent) -->
+  <div class="quick-links">
+    <div>
+      <h4><i class="fas fa-question-circle" style="color:var(--moss);"></i> Cookie FAQs</h4>
+      <ul>
+        <li>• <a href="#">How do I disable cookies?</a></li>
+        <li>• <a href="#">Are cookies safe?</a></li>
+        <li>• <a href="#">Do you use third-party cookies?</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4><i class="fas fa-pen-fancy" style="color:var(--clay);"></i> Related policies</h4>
+      <ul>
+        <li>• <a href="terms.html">Terms of Privacy</a></li>
+        <li>• <a href="privacy.html">Privacy Policy</a></li>
+        <li>• <a href="contact.html">Contact us</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- newsletter (matching original) -->
+  <div class="newsletter">
+    <h3>The Briarpath letter</h3>
+    <p>Seasonal insights, rare seed notes, and garden essays. No spam, only soil.</p>
+    <input type="email" placeholder="your email" />
+    <button>Subscribe</button>
+  </div>
+
+  <!-- footer (identical) -->
+  <footer class="footer">
+    <div>© 2026 Casterra · Briarpath Retreat</div>
+    <div style="display:flex; gap:1.2rem;">
+      <a href="#">about</a> <a href="#">contact</a> <a href="#">privacy</a> <a href="#">rss</a>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
